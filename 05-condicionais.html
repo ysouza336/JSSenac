@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .titulo{background-color: blueviolet;padding: 20px; margin: 0;text-align: center;}
+        p{
+            font-size: 1.2rem;
+            width: 90%;
+            background-color: cadetblue;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        ul{
+            list-style: none;
+            gap: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>  
+        <div class="titulo">
+           <h1>Comandos Condicionais</h1> 
+        </div>
+        
+        <p>São estruturas de controle de fluxo que permitem que o código tome decisões.</p>
+        <p>Elas funcionam avaliando uma expressão lógica (condição) que resulta em <b>verdadeiro (true)</b> ou <b>falso (false)</b>.</p>
+        <p>Com base nesse resultado, nosso script <b>toma uma decisão</b> e executa as açoes conforme o resultado.</p>
+
+        <h2>Exemplos de cénarios que envolvem lógica condicional:</h2>
+        <ul>
+            <li>Processo de login: dados certos ? entra.... errados ? não entra</li>
+            <li>Vitrine de produtos: tem estoque ? mostra o produto... senão, não mostra!</li>
+            <li>Cadastro de senha segura: o valor digitado atende os critérios? se sim, efetiva o cadastro... senão, não efetiva.</li>
+        </ul>
+        <div id="resultado"></div>
+
+<script src="./js/05-condicionais.js"></script>
+</body>
+</html>
