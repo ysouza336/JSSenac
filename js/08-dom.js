@@ -69,3 +69,111 @@ for(const botao of botoesDeFoto){
     });
 
 }
+
+/*Exemplo 03 */
+const textareaMensagem = document.querySelector("#mensagem");
+const spanContadorCaracteres = document.querySelector("#contador");
+const spanContadorRegressivo = document.querySelector("#regressivo");
+
+
+
+//Captura do que é digitado em tempo real
+textareaMensagem.addEventListener("input", function(){
+    //Capturando a quantidade de caracteres digitados
+    let totalCaracteres = textareaMensagem.value.length;
+
+    spanContadorCaracteres.textContent = totalCaracteres;
+
+    //Contador regressivo
+
+    const limiteMaximo = 100;
+    const contagemRegressiva = limiteMaximo - totalCaracteres; // limite - qtd digitada
+    spanContadorRegressivo.textContent = contagemRegressiva;
+
+    if(totalCaracteres >= limiteMaximo){
+        //aqui estou fazendo css inline para esse proposito
+        textareaMensagem.style.background ="pink";
+        spanContadorCaracteres.style.color="red";
+        spanContadorCaracteres.style.fontWeight="bold";
+
+        // spanContadorCaracteres.classList.add("excesso");
+    }
+    else{
+        
+        // spanContadorCaracteres.classList.remove("excesso");
+        spanContadorCaracteres.style.color="black"
+        textareaMensagem.style.background ="transparent";
+    }
+});
+
+/** Exemplo 04 */
+const kbdTeclaPressionada = document.querySelector("#tecla-pressionada kbd");
+const pagina = document.body; 
+
+//Monitoramento de eventos de teclado sempre a partir do document
+ 
+document.addEventListener("keypress", function(event){
+    const teclaUsada = event.key;
+
+    kbdTeclaPressionada.textContent = teclaUsada;
+
+    if(teclaUsada === "a"){
+        kbdTeclaPressionada.style.background = "yellow";
+
+        Object.assign(pagina.style,{
+            background:"darkblue",
+            transition:"3s",
+        }) 
+    }
+    if(teclaUsada ==="r"){
+        kbdTeclaPressionada.style.background = "transparent";
+        pagina.style.background = "#f4f4f4";
+    }
+});
+
+/** Exemplo 05 */
+
+const inputTarefa = document.querySelector("#tarefa");
+const botaoAdicionar = document.querySelector("#adicionar");
+const listaTarefas = document.querySelector("#lista");
+
+
+
+botaoAdicionar.addEventListener("click", function() {
+    //Capturar a tarefa digitada no input
+    const tarefaDigitada = inputTarefa.value;
+
+    //se não for digitada nenhuma tarefa, interrompa  a função
+    if(tarefaDigitada === ""){
+        alert("Campo Vazio  Favor Preencher")
+        return
+    };
+
+   //Criar o elemento <li>
+   const item = document.createElement("li");
+
+   item.textContent = tarefaDigitada;
+
+   listaTarefas.appendChild(item);
+
+   //Aqui limpa o input apos digitação
+   inputTarefa.value = "";
+   inputTarefa.focus(); // aqui apos a digitação o campo fica em branco e retorna o foca para o input novamente.
+
+   //Quando ocorrer o clique no item/tarefa, adicionar a classe feito
+    item.addEventListener("click", function(){
+        item.classList.toggle("feito");
+    })
+
+});
+
+// Mapeamento de Evento, Detectar o ENTER durante o uso do input, e executar a função de clique do botão adicionar
+inputTarefa.addEventListener("keyup", function(event){
+    if(event.key === "Enter") botaoAdicionar.click();
+});
+
+
+
+
+
+
