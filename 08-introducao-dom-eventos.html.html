@@ -114,29 +114,37 @@
         <hr>
 
         <h2>6 - Envio de formulário</h2>
-        <form action="" method="post">
+        <!-- Ao usar o atributo novalidade, informamos ao navegador que o formulario não será validado pelo proprio HTML5. Nesse caso, a validação terá que ser feita manualmente via programação -->
+        <form id="exemplo06" action="" method="post" novalidate>
             <p>
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" required>
             </p>
 
-            <p>
+            <!-- <p>
                 <label for="email">Email</label>
                 <input type="email" name="" id="email" required>
-            </p>
+            </p> -->
             <p>
                 <label for="idade">Idade</label>
                 <input type="number" name="idade" id="idade" required>
             </p>
 
             <button type="submit">Enviar</button>
-        </form>    
+        </form>  
+
+        <!-- Aqui vamos apresentar mensagens/saidas ao usuário -->
+        <p id="saida"></p>  
 
     
         <hr>
 
         <h2>7 - Exibir senha</h2>
-        
+        <p>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha">
+        </p>
+        <button id="mostrar">👁️ Mostrar senha</button>
         
     </div>
 

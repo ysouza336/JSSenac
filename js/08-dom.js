@@ -173,6 +173,92 @@ inputTarefa.addEventListener("keyup", function(event){
 });
 
 
+/*Exemplo 06 */
+
+const formExemplo06 = document.querySelector("#exemplo06");
+const inputNome = formExemplo06.querySelector("#nome");
+const inputIdade = formExemplo06.querySelector("#idade");
+const pSaida = document.querySelector("#saida");
+
+// Detectar o acionamento do formulario: evento submit
+formExemplo06.addEventListener("submit", function(event) {
+
+    // Anulando o coportamento padrao do formulario
+    event.preventDefault();
+    
+
+    // capturando dados digitados
+
+    const nome = inputNome.value.trim(); // removendo espaços no inicio/fim
+    const idade = Number(inputIdade.value); // garantindo que a idade seja numero 
+
+    /**Validações do Campo */
+    if(nome === ""){
+        pSaida.textContent = "Por Favor, Preencha o Nome"
+        //aqui trata-se de estilização inline no JS
+        Object.assign(pSaida.style,{
+            fontSize: '1rem',
+            color: 'white',
+            backgroundColor: 'red',
+            padding:'10px',
+            borderRadius: '5px',
+            textAlign: 'center',
+        });
+        return; // pare tudo (enquanto essa validação não for atendida)
+    }
+    if(isNaN(idade) || idade < 0 || idade > 120 || idade == ""){
+        pSaida.textContent = "Por favor, preencha idade entre 0 a 120";
+
+        Object.assign(pSaida.style,{
+            fontSize: '1rem',
+            color: 'purple',
+            backgroundColor: 'darkgray',
+            padding:'10px',
+            borderRadius: '5px',
+            textAlign: 'center',
+        })
+        return;
+    }
+
+    // Nenhuma das condiçoes anteriores  deu true? então significa que tudo deu certo!
+    //Portanto, avisamos o usuario:
+
+    pSaida.textContent = `Olá ${nome}, você tem ${idade} anos! Seus dados foram enviados!`;
+        Object.assign(pSaida.style,{
+            fontSize: '1rem',
+            color: 'white',
+            backgroundColor: 'blue',
+            padding:'10px',
+            borderRadius: '5px',
+            textAlign: 'center',
+            fontWeight: 'bold',
+        });
+
+    formExemplo06.reset();// reset(limpeza) dos campos
+    inputNome.focus();//devolvendo o cursor (foco ao primeiro campo)
+});
+
+//Exemplo 07
+
+const inputSenha = document.querySelector("#senha");
+const botaoMostrar = document.querySelector("#mostrar");
+
+
+//Ao pressionar botao
+botaoMostrar.addEventListener("pointerdown", function(){
+     inputSenha.type ="text";
+     const newLocal = botaoMostrar.textContent = "🙈 Ocultar";
+});
+ 
+//Ao soltar ou liberar o botao
+botaoMostrar.addEventListener("pointerup", function(){
+   inputSenha.type = "password";
+   botaoMostrar.textContent = "👁️ Mostrar Senha"
+});
+
+
+
+
 
 
 
