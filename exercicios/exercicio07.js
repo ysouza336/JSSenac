@@ -28,6 +28,5 @@ formMedia.addEventListener("submit", function(event){
     pMedia.className = classe;
     mostrarResultado.className = classe;
   
-
 });
 
