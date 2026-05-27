@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria com SimpleLightbox</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.css" integrity="sha512-5gTxhbmgsOKfPP2+TeKslkMmyxF0Cmyr2YrJrfaXD/ChLHavFXGzDDG9ZiOca1P/2/5nXuujkB2BWymVKu1pPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</head>
+
+<body>
+
+    <h1>Exercício 08: Galeria de Fotos usando a lib SimpleLightbox</h1>
+    <p>Site oficial: <a href="https://simplelightbox.js.org/" target="_blank">SimpleLightbox</a></p>
+
+    <p><i>Veja a documentação no site oficial e, seguindo as instruções, monte a estrutura necessária para implementar uma galeria de imagens.</i></p>
+
+    <hr>
+
+
+
+    <div class="slider splide">
+        <div class="splide__track">
+            <ul class="splide__list gallery">
+                <li class="splide__slide">
+                    <figure >
+                        <a href="./imagens/grande1.jpg">
+                        <img src="./imagens/thumb1.jpg" alt="" title="Beautiful Image">
+                        </a>
+                        <figcaption>Tower Bridge</figcaption>
+                    </figure>
+                </li>
+                <li class="splide__slide">
+                    <figure>
+                        <a href="./imagens/grande1.jpg">
+                        <img src="./imagens/thumb2.jpg" alt="" title="Céu estrelado">
+                        </a>
+                        <figcaption>Hotel PARKROYAL COLLECTION Pickering</figcaption>
+                    </figure>
+                </li>
+                <li class="splide__slide">
+                    <figure>
+                        <a href="./imagens/grande3.jpg">
+                        <img src="./imagens/thumb3.jpg" alt="" title="Falésia e praia em formato de baía">
+                        </a>
+                        <figcaption>Horizonte (skyline) de Ho Chi Minh </figcaption>
+                    </figure>
+                </li>
+                <li class="splide__slide">
+                    <figure>
+                        <a href="./imagens/grande4.jpg">
+                        <img src="./imagens/thumb4.jpg" alt="" title="Trem passando por montanhas verdes">
+                        </a>
+                        <figcaption>Complexo Raffles City Chongqing</figcaption>
+                    </figure>
+                </li>
+                <li class="splide__slide">
+                    <figure>
+                        <a href="./imagens/grande5.jpg">
+                        <img src="./imagens/thumb5.jpg" alt="" title="Sol vermelho">
+                        </a>
+                        <figcaption>Complexo Raffles City Chongqing</figcaption>
+                    </figure>
+                </li>
+                <li class="splide__slide">
+                    <figure>
+                        <a href="./imagens/grande6.jpg">
+                        <img src="./imagens/thumb6.jpg" alt="" title="Terraços verdes">
+                        </a>
+                        <figcaption>Complexo Raffles City Chongqing</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>   
+  </div>
+
+    <!-- <div class="galeria gallery">
+        <a href="imagens/grande1.jpg">
+            <img src="imagens/thumb1.jpg" alt="" title="Beautiful Image">
+        </a>
+        <a href="imagens/grande2.jpg">
+            <img src="imagens/thumb2.jpg" alt="" title="Céu estrelado">
+        </a>
+        <a href="imagens/grande3.jpg">
+            <img src="imagens/thumb3.jpg" alt="" title="Falésia e praia em formato de baía">
+        </a>
+        <a href="imagens/grande4.jpg">
+            <img src="imagens/thumb4.jpg" alt="" title="Trem passando por montanhas verdes">
+        </a>
+        <a href="imagens/grande5.jpg">
+            <img src="imagens/thumb5.jpg" alt="" title="Sol vermelho">
+        </a>
+        <a href="imagens/grande6.jpg">
+            <img src="imagens/thumb6.jpg" alt="" title="Terraços verdes">
+        </a>
+        
+    </div> -->
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js" integrity="sha512-Vtot07oogPy4e0JzAfUgyvia0fATgR1PWWNG89EeQgPXmaIhjGQIFijUVxRn0TScCMCH57Y7eJSixmYYDJkJ1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="exec-08.js"></script>
+</body>
+
+</html>

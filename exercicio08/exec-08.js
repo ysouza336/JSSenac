@@ -1,24 +1,21 @@
-'use strict';
+'use strict'
+
+let lightbox = new SimpleLightbox('.gallery a', { 
+    overlayOpacity:0.7,
+    download:true,
+    maxZoom:30
+});
 
 const opcoes = {
     type: 'loop',
     autoplay: true,
     interval: 5000,
     pagination:false,
-
-    //responisvo
-    perPage:3,
-    gap:"1rem",
-    breakpoints:{
-        800: {perPage:2},
-        600:{perPage:1}
-    }
 };
-
-
-
 //slide
 const slider = new Splide('.splide',opcoes);
+
+
 
 //Ativando
 slider.mount();
