@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Busca CEP</title>
+
+<style>
+*, *::before, *::after { box-sizing:border-box; }
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background:white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.linha {
+    display: flex;
+    gap: 10px;
+    margin-block-end: 15px;
+}
+
+.campo { flex:1; }
+
+label {
+    display: block;
+    margin-block-end: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+}
+
+#mensagem {
+    margin-block-start: 10px;
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Buscar endereço</h1>
+
+<form id="form-address" action="" method="post">
+    <div class="linha">
+        <div class="campo">
+            <label for="cep">CEP (digite somente os números)</label>
+            <input type="text" id="cep" name="cep" maxlength="9" required autocomplete="off">
+        </div>
+    </div>
+
+    <div class="linha">
+        <div class="campo">
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco">
+        </div>
+    </div>
+
+    <div class="linha">
+
+        <div class="campo">
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro">
+        </div>
+
+        <div class="campo">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade">
+        </div>
+
+        <div class="campo">
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" name="estado">
+        </div>
+
+    </div>
+
+    <p id="mensagem"></p>
+
+</form>
+<!-- Sempre importe o script do plugin/lib ANTES do seu proprio script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js" integrity="sha512-RbMQw6xKGymv6bRMO4z5OxHBzzem7BPEQX7nTJC9G08A70gXdUka76Rvgey83MsSXrIEJddog0vxUKN6iTce2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="js/09-busca-cep.js"></script>
+
+</div>
+</body>
+</html>
